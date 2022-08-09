@@ -1,7 +1,8 @@
 set -ex
 
 ### Install Runtime libraries
-
+curl -O https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
+&& yum -y install epel-release-latest-7.noarch.rpm
 yum -y install python-pip git
 pip install --upgrade pip
 pip install virtualenv
