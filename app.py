@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
+import joblib
 import numpy as np
 import pandas as pd
-from flask import Flask, request, render_template
-import joblib
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-model = joblib.load("student_mark_predictor.pkl")
+model = joblib.load(open("student_mark_predictor.pkl",'rb'))
 
 df = pd.DataFrame()
 
